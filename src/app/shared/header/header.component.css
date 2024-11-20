@@ -1,0 +1,35 @@
+/* Estilo para la barra de navegación */
+.navbar {
+  background-color: #f4bfbf;
+}
+
+.navbar-nav .nav-item .nav-link {
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #4B4B4B;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Alinea el icono y el texto verticalmente */
+  justify-content: center; /* Alinea el icono y el texto horizontalmente */
+  border: none; /* Eliminar borde */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: transparent; /* No cambia de color al hacer hover */
+  color: #4B4B4B; /* Mantiene el color original al pasar el mouse */
+}
+
+.navbar-nav .nav-item .nav-link i {
+  margin-left: 10px; /* Espacio entre el texto y el icono */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  background-color: #F4BFBF; /* Fondo del botón activo */
+  color: #4B4B4B; /* Color del texto del botón activo */
+}
+
+/* Estilos para el logo */
+.navbar-brand i {
+  margin-right: 8px; /* Espacio entre el logo y el nombre */
+}

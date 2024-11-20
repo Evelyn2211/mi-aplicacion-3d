@@ -1,0 +1,26 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-color: #DAF4BF; /* color de fondo en caso de que no cargue la imagen */
+  background-image: url('/assets/15.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido se muestre por encima de la imagen */
+  color: #4B4B4B; /* Color del texto */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Un fondo semi-transparente */
+  z-index: 0; /* Asegura que el fondo de la imagen esté debajo del texto */
+}

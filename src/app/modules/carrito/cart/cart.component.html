@@ -1,0 +1,31 @@
+<div class="container py-5">
+  <h2 class="text-center mb-4">Carrito de Compras</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-8 mb-4" *ngFor="let item of cartProducts">
+      <div class="card h-100 shadow-sm">
+        <div class="row g-0 align-items-center">
+          <div class="col-3">
+            <img [src]="item.image" alt="{{ item.name }}" class="img-fluid rounded-start" style="max-height: 100px;">
+          </div>
+          <div class="col-9">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">Precio: ${{ item.price }}</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <input type="number" [(ngModel)]="item.quantity" class="form-control me-2" style="max-width: 60px;">
+                <button class="btn btn-danger btn-sm">Eliminar</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="text-end mt-3">
+      <h4>Total: ${{ getTotal() }}</h4>
+      <button class="btn btn-success">Comprar</button>
+    </div>
+  </div>
+  </div>
+  

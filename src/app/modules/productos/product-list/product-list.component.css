@@ -1,0 +1,86 @@
+/* Contenedor principal */
+.container {
+  background-color: #F9FAFB; /* Fondo suave */
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* Estilo de las tarjetas de producto */
+.product-card {
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #FFFFFF; /* Blanco para las tarjetas */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.product-card:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Imagen del producto */
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0; /* Bordes redondeados solo arriba */
+}
+
+/* Superposición del producto */
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro para la superposición */
+  color: #F9FAFB; /* Blanco para el texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+/* Mostrar la superposición al pasar el ratón */
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+/* Nombre del producto */
+.product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F4BFBF; /* Rosa pastel claro */
+}
+
+/* Pie de la tarjeta (botón) */
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del botón de agregar al carrito */
+.product-footer .btn {
+  background-color: #94D7A2; /* Verde pastel claro */
+  color: #FFFFFF; /* Blanco */
+  border: none;
+  border-radius: 30px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.product-footer .btn:hover {
+  background-color: #80aef8; /* Azul pastel suave */
+}
+
+.product-footer .btn i {
+  margin-right: 5px;
+}
